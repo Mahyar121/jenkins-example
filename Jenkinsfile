@@ -24,7 +24,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 sh "$PWD"
-                dir('D:\Jenkins\Java\jenkins-example')
+                dir('D:/Jenkins/Java/jenkins-example')
                 withMaven(maven : 'maven_3_6_3') {
                     sh '${MAVEN_HOME}/bin/mvn deploy'
                 }
