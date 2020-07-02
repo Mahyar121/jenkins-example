@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_6_3') {
-                    sh '${M2_HOME}/bin/mvn clean compile'
+                    sh '${MAVEN_HOME}/bin/mvn clean compile'
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_6_3') {
-                    sh 'mvn test'
+                    sh '${MAVEN_HOME}/bin/mvn test'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 withMaven(maven : 'maven_3_6_3') {
-                    sh 'mvn deploy'
+                    sh '${MAVEN_HOME}/bin/mvn deploy'
                 }
             }
         }
