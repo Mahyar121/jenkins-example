@@ -42,4 +42,12 @@
     </dependencies>
 
 
+    <distributionManagement>
+        <repository>
+            <id>myMavenRepo.write</id>
+            <url>D:\Jenkins\Java\jenkins-example</url>
+        </repository>
+    </distributionManagement>
+
+
 </project>
